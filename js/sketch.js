@@ -86,6 +86,6 @@ function draw() {
 }
 
 function mousePressed() {
-    console.log(mouseX, mouseY)
+    // console.log(mouseX, mouseY)
     handleEvents();
 }
