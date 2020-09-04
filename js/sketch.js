@@ -45,12 +45,12 @@ let touch = false;
 let clear;
 
 function preload() {
-    play = loadImage("../images/blueplaydull.png")
-    pause = loadImage("../images/bluepausedull.png")
-    graph = loadImage("../images/graphbutton.png")
-    back = loadImage("../images/bluebkdulls.png")
-    bg = loadImage("../images/frame_copper_ver02.png")
-    spr = loadImage("../images/spring.png")
+    play = loadImage("images/blueplaydull.png")
+    pause = loadImage("images/bluepausedull.png")
+    graph = loadImage("images/graphbutton.png")
+    back = loadImage("images/bluebkdulls.png")
+    bg = loadImage("images/frame_copper_ver02.png")
+    spr = loadImage("images/spring.png")
 }
 
 function setup() {
