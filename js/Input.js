@@ -52,7 +52,7 @@ class NumberInput {
         this.initialise();
 
         if (this.inp != this.input1.value()) {
-            resetGraphs();
+            clearGraphs();
             this.inp = this.input1.value();
             if (this.ifSlider) {
                 this.input2.value(this.inp);
@@ -61,7 +61,7 @@ class NumberInput {
 
         if (this.ifSlider) {
             if (this.inp != this.input2.value()) {
-                resetGraphs();
+                clearGraphs();
                 this.inp = this.input2.value();
                 this.input1.value(this.inp);
             }
