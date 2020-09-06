@@ -58,3 +58,7 @@
     cursor: pointer;
     /* Cursor on hover */
 }
+
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1
+}
