@@ -1,4 +1,4 @@
-class DynamicGraph  {
+class DynamicGraph {
     constructor(x, y, h, w, yLabel, xLabel, minX, maxX, minY, maxY, func) {
         this.length = 0;
         this.x = x;
@@ -13,16 +13,19 @@ class DynamicGraph  {
         this.yLabel = yLabel;
         this.graphs = [];
         this.function = func;
+        this.timer = 0;
     }
 
-    initialise()    {
+    initialise() {
+        this.timer = 0;
         let temp = [];
-        for (let x = 0; x < this.w; x+=1)   {
+        for (let x = 0; x < this.w; x += 1) {
             let tempx = map(x, 0, this.w, this.minX, this.maxX);
             let y = map(this.function(tempx, spring1), this.minY, this.maxY, 0, this.h);
             temp.push([x, y])
         }
         temp.label = [random(255), random(255), random(255)];
+        temp.timer = 0;
         this.graphs.push(temp);
     }
 
@@ -76,4 +79,6 @@ class DynamicGraph  {
             this.graphs[this.graphs.length - 1].timer = this.timer;
         }
     }
+
 }
+
