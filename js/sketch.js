@@ -64,10 +64,10 @@ function setup() {
     magFac = new DynamicGraph(125, 325, 230, 290, "Magnification Factor", "n", 0, 2.5, 0, 7.5, System.mag_func);
     phaseAng = new DynamicGraph(125, 495, 150, 290, "Phase Angle", "n", 0, 2.5, 0, 180, System.phase_func);
 
-    k = new NumberInput(620, 150, "Stiffness (N/m)", 8000, 999000, 8000, 0.5, true);
+    k = new NumberInput(620, 150, "Stiffness(N/m)", 8000, 999000, 8000, 0.5, true);
     m = new NumberInput(620, 200, "Mass(kg)", 32, 200, 166, 0.5, true);
     z = new NumberInput(620, 253, "Damping Ratio", 0.00, 1.00, 0.07, 0.01, true);
-    slider_force = new NumberInput(620, 300, "Unbalanced Mass\n(kg)", 1, 10, 10, 0.5, false);
+    slider_force = new NumberInput(620, 300, "Unbalanced\nMass(kg)", 1, 10, 10, 0.5, false);
     slider_ang_freq = new NumberInput(620, 350, "Rotating Speed\n(rad/s)", 1, 800, 6, 0.5, false);
 
     button1 = new Button(645, 460, pause)
