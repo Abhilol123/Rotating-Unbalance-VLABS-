@@ -26,6 +26,7 @@ class System  {
     }
 
     update(t, _mulfact)  {
+        this.t = t;
         this.fi = atan((-2*this.z*this.w / this.wn) / (1 - (this.w*this.w)/(this.wn*this.wn)));
         let numerator = this.F/this.k;
         let temp1 = Math.pow((1 - ((this.w*this.w)/(this.wn*this.wn))), 2);
@@ -64,6 +65,17 @@ class System  {
         fill(_fill);
         rectMode(CENTER)
         rect(this.x_equilibrium + this.x, this.y_equilibrium + this.y, this.width, this.h)
+        fill(255);
+        ellipse(this.x_equilibrium + this.x, this.y_equilibrium + this.y, 42, 42);
+
+        let r = 17;
+        // console.log(this.fi);
+        let x = r*Math.sin(this.w*this.t + this.fi);
+        let y = -r*Math.cos(this.w*this.t + this.fi);
+
+        fill(255, 0, 0);
+
+        ellipse(this.x_equilibrium + this.x + x, this.y_equilibrium + this.y + y, 6, 6);
         
         pop();
     }
