@@ -26,19 +26,8 @@ class DynamicGraph  {
         this.graphs.push(temp);
     }
 
-    draw()  {
+    draw() {
         push();
-
-        for (let n = 0; n < this.graphs.length; n++)   {
-            beginShape();
-            stroke(this.graphs[n].label[0], this.graphs[n].label[1], this.graphs[n].label[2]);
-            strokeWeight(1);
-            noFill();
-            for (let i = 0; i < this.graphs[n].length; i++) {
-                vertex(this.x + this.graphs[n][i][0], this.y - this.graphs[n][i][1]);
-            }
-            endShape();
-        }
 
         stroke(0);
         strokeWeight(1);
@@ -54,5 +43,37 @@ class DynamicGraph  {
         text(this.yLabel, 10, -20);
 
         pop();
+
+
+        push();
+
+        for (let n = 0; n < this.graphs.length - 1; n++) {
+            beginShape();
+            stroke(this.graphs[n].label[0], this.graphs[n].label[1], this.graphs[n].label[2]);
+            strokeWeight(1);
+            noFill();
+            for (let i = 0; i < this.graphs[n].timer; i++) {
+                vertex(this.x + this.graphs[n][i][0], this.y - this.graphs[n][i][1]);
+            }
+            endShape();
+        }
+
+        beginShape();
+        stroke(this.graphs[this.graphs.length - 1].label[0], this.graphs[this.graphs.length - 1].label[1], this.graphs[this.graphs.length - 1].label[2]);
+
+        let j = this.timer;
+        strokeWeight(1);
+        noFill();
+        for (let i = 0; i < j; i++) {
+            vertex(this.x + this.graphs[this.graphs.length - 1][i][0], this.y - this.graphs[this.graphs.length - 1][i][1]);
+        }
+        endShape();
+
+        pop();
+
+        if (this.timer < this.graphs[this.graphs.length - 1].length) {
+            this.timer += 1;
+            this.graphs[this.graphs.length - 1].timer = this.timer;
+        }
     }
 }
