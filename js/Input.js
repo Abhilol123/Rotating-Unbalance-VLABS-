@@ -18,8 +18,8 @@ class NumberInput {
     initialise() {
         if (this.initialised) {
             this.input1 = createInput(this.inp);
-            this.input1.size(40, 20);
-            this.input1.position(this.x + this.w - 30, this.y - 20);
+            this.input1.size(55, 20);
+            this.input1.position(this.x + this.w - 45, this.y - 20);
             this.input1.elt.style.position = "absolute";
 
             this.input1.elt.setAttribute("type", "number");
