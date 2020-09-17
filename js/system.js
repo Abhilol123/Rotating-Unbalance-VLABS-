@@ -71,7 +71,7 @@ class System  {
         let r = 17;
         // console.log(this.fi);
         let x = r*Math.sin(this.w*this.t + this.fi);
-        let y = -r*Math.cos(this.w*this.t + this.fi);
+        let y = r*Math.cos(this.w*this.t + this.fi);
 
         fill(255, 0, 0);
 
